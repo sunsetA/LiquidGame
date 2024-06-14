@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F94F4360-78C4-A9AA-F82D-808475D30122}</ProjectGuid>
+    <ProjectGuid>{A4C4948D-98D5-1F3E-7E6D-D542AB0470D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -1057,11 +1057,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Obi.csproj">
-      <Project>{B2AE8EB0-A725-0380-719D-F81FA98C0186}</Project>
+      <Project>{DF169AD3-97B5-FC18-DAAE-0F153F10C9B4}</Project>
       <Name>Obi</Name>
     </ProjectReference>
     <ProjectReference Include="Obi.Editor.csproj">
-      <Project>{1C426E0D-2B30-49F2-B86F-725EDED69BDA}</Project>
+      <Project>{B6F28A23-754C-2BD9-0873-60804FA377E4}</Project>
       <Name>Obi.Editor</Name>
     </ProjectReference>
   </ItemGroup>
