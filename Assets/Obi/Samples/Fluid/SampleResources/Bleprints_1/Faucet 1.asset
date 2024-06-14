@@ -12054,7 +12054,7 @@ MonoBehaviour:
     batches: []
   groups: []
   capacity: 12000
-  resolution: 5
+  resolution: 3.5
   restDensity: 1000
   smoothing: 2
   viscosity: 0.01

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LiquidWall.unity
+    guid: 4b71bdf908eb52849a66395a4db78491
   m_configObjects: {}

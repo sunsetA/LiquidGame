@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F94F4360-78C4-A9AA-F82D-808475D30122}</ProjectGuid>
+    <ProjectGuid>{A4C4948D-98D5-1F3E-7E6D-D542AB0470D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,6 +66,7 @@
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\LookAroundCamera.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColliderHighlighter.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\SlowmoToggler.cs" />
+    <Compile Include="Assets\LiquidControl.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectLimit.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiParticleCounter.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\DebugParticleFrames.cs" />
@@ -78,47 +79,95 @@
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorRandomizer.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidJetController.cs" />
+    <Compile Include="Assets\ErbGameArt\AAA Projectiles\Scripts\ParticleCollisionInstance.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiActorTeleport.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\SolidifyOnContact.cs" />
+    <Compile Include="Assets\ErbGameArt\AAA Projectiles\Scripts\ProjectileMover.cs" />
+    <Compile Include="Assets\ErbGameArt\AAA Projectiles\Scripts\Rotator.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ExtrapolationCamera.cs" />
+    <Compile Include="Assets\RotateSelf.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidColorizer.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\SampleCharacterController.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeScoreFormatter.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\Melt.cs" />
+    <Compile Include="Assets\TouchEvent.cs" />
+    <Compile Include="Assets\ErbGameArt\AAA Projectiles\Demo scene with projectiles\DemoShooting.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectDragger.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\MoveAndRotate.cs" />
     <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromViscosity.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\EmitOnKeyPress.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
+    <Compile Include="Assets\ErbGameArt\AAA Projectiles\LWRP\ShaderChanger.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\OverlapTest.cs" />
     <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\BucketController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Prefabs\Projectiles(Speed)\Readme.txt" />
     <None Include="Assets\Obi\Samples\Fluid\SampleResources\Materials\StandardPerInstanceColor.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Demo scene with projectiles\Documentation.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidThickness.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\LWRP\LWRP_Blend_CenterGlow.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\FluidShaderURP.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\ObiLightingURP.cginc" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Prefabs\Readme.txt" />
     <None Include="Assets\Obi\Plugins\x86_64\libOni.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiLightingBuiltIn.cginc" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\LWRP\LWRP_Blend_DistortTexture.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Shaders\Add_DistortTexture.shader" />
+    <None Include="Assets\ErbGameArt\4290_圣诞节道具场景_爱给网_aigei_com\4290_圣诞节道具场景\声明.txt" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\LWRP\LWRP_Add_Trail.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiParticles.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\LWRP\LWRP_Electricity.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\StandardVertexColors.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Shaders\Blend_CenterGlow.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\LWRP\LWRP_Add_DistortTexture.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\SimpleParticleShader.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiEllipsoids.cginc" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\ParticleShaderURP.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\SimpleParticleShaderURP.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Shaders\Electricity.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\RedWorks - LP Christmas Pack\Assets\Shaders\Skybox Gradient.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Obi\CHANGELOG_fluid.txt" />
     <None Include="Assets\Obi\Resources\ObiMaterials\NormalReconstruction.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Shaders\Add_Trail.shader" />
+    <None Include="Assets\Materia\wall.shader" />
     <None Include="Assets\Obi\Plugins\x86\libOni.dll" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsBlend.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\LWRP\LWRP_Add_CenterGlow.shader" />
+    <None Include="Assets\Colorfull_Umbrellas\Documentation.txt" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiFluids.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Shaders\Add_CenterGlow.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Shaders\Blend_DistortTexture.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\FluidShader.shader" />
+    <None Include="Assets\ErbGameArt\AAA Projectiles\Prefabs\Projectiles(transform)\Readme.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ObiUtils.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\URP\ObiFluidsURP.cginc" />
   </ItemGroup>
   <ItemGroup>
@@ -1057,11 +1106,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Obi.csproj">
-      <Project>{B2AE8EB0-A725-0380-719D-F81FA98C0186}</Project>
+      <Project>{DF169AD3-97B5-FC18-DAAE-0F153F10C9B4}</Project>
       <Name>Obi</Name>
     </ProjectReference>
     <ProjectReference Include="Obi.Editor.csproj">
-      <Project>{1C426E0D-2B30-49F2-B86F-725EDED69BDA}</Project>
+      <Project>{B6F28A23-754C-2BD9-0873-60804FA377E4}</Project>
       <Name>Obi.Editor</Name>
     </ProjectReference>
   </ItemGroup>

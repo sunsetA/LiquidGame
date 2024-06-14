@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1C426E0D-2B30-49F2-B86F-725EDED69BDA}</ProjectGuid>
+    <ProjectGuid>{B6F28A23-754C-2BD9-0873-60804FA377E4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Obi.Editor</AssemblyName>
@@ -1057,7 +1057,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Obi.csproj">
-      <Project>{B2AE8EB0-A725-0380-719D-F81FA98C0186}</Project>
+      <Project>{DF169AD3-97B5-FC18-DAAE-0F153F10C9B4}</Project>
       <Name>Obi</Name>
     </ProjectReference>
   </ItemGroup>
