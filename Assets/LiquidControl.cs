@@ -9,6 +9,24 @@ using UnityEngine.UI;
 public class SquidControl : MonoBehaviour
 {
 
+    public int SandIndex = -1;
+    public Dictionary<int, int> sandInterectiveDic = new Dictionary<int, int>();
+    [Serializable]
+    public enum WallType
+    {
+        //完全不透水
+        wood,
+        //吸收一会之后透水
+        sand,
+        //完全透水
+        net,
+
+    }
+
+    public WallType currentType = WallType.wood;
+
+    public List<ObiCollider> walls;
+
     public Canvas UICanvas;
     [Header("墙体对象,需要有碰撞盒,以及Obi colliderzu组件")]
     public ObiCollider entityPrefab; // 实体对象的预制体
@@ -21,7 +39,10 @@ public class SquidControl : MonoBehaviour
     /// <summary>
     /// 实例化的预制体
     /// </summary>
-    private List<ObiCollider> entityInatanceList = new List<ObiCollider>();
+    public List<ObiCollider> entityInatanceList = new List<ObiCollider>();
+
+
+
     [Serializable]
     public enum InteractType
     {
@@ -44,7 +65,13 @@ public class SquidControl : MonoBehaviour
 
     private Vector3 OriginSeletedPos = Vector3.zero;
 
-    
+
+    public static SquidControl Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     //private void Awake()
     //{
     //    Debug.LogError("1.OnWallBtnClickDown 方法需要手动拖拽到左右两侧按钮上          2.free模式下的预制体不需要定义大小和旋转，代码中已经修改  3.预制体需要碰撞器和 obiCollider");
@@ -69,6 +96,11 @@ public class SquidControl : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //if (Physics.Raycast(ray,out RaycastHit hit))
+            //{
+            //    CurrentPos = hit.point;
+            //}
             CurrentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             CurrentPos.z = 0;
             //===================================自由创作=================================
@@ -87,8 +119,16 @@ public class SquidControl : MonoBehaviour
                 }
                 else
                 {
+                    if (currentInteracType == InteractType.Free)
+                    {
+                        SandIndex++;
+                        sandInterectiveDic.Add(SandIndex,0);
+                    }
+
                     points.Add(CurrentPos);
                     InstantiateEntities_New(CurrentPos);
+
+
                 }
 
             }
@@ -130,7 +170,13 @@ public class SquidControl : MonoBehaviour
     /// <param name="targetPos"></param>
     private void InstantiateEntities_New(Vector3 targetPos)
     {
+        entityPrefab = walls[(int)currentType];
+
         var obj = Instantiate(entityPrefab.gameObject, targetPos, Quaternion.identity, transform);
+        if ((int)currentType == 1)
+        {
+            obj.GetComponent<SandWall>().Index = SandIndex;
+        }
         OBJpoints.Add(obj);
         obj.transform.localScale = new Vector3(0.3f, 0.02f, 0.2f);
         //int curIndex = obj.transform.GetSiblingIndex();
@@ -210,5 +256,11 @@ public class SquidControl : MonoBehaviour
     public bool isOnButton(Canvas uiParent, Vector3 mousePosition)
     {
         return GetOverUIobj(uiParent, mousePosition) != null;
+    }
+
+
+    public void SetWall(int index)
+    {
+        currentType = (WallType)index;
     }
 }

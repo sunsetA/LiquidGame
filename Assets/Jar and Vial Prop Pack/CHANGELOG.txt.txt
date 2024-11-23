@@ -1,0 +1,22 @@
+/////////////////
+Version Changelog
+/////////////////
+
+Current Version: 1.1
+
+///////////
+Version 1.0
+///////////
+	-Initial Release!
+
+///////////
+Version 1.1
+///////////
+
+Additions
+	-Added 3 new jars, 2 new vials, and a new cap model!
+
+Changes
+	-Updated all the original props to a new texturing system
+	-Moved all the original props to a folder named "Jar and Vial Prop Pack OLD", if you prefer to use the old style props
+		-NOTE: Any new props added will ONLY be added with the new texturing style

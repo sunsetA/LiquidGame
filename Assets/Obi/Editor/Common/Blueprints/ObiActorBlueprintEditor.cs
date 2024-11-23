@@ -117,7 +117,7 @@ namespace Obi
                 renderMode.OnDestroy();
             }
 
-            properties.Clear();
+            //properties.Clear();
             renderModes.Clear();
         }
 

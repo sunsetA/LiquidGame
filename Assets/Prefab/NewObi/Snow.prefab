@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2939382413739579938}
+  - component: {fileID: 207949004604792427}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -32,6 +33,19 @@ Transform:
   - {fileID: 7790764497751373870}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &207949004604792427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361233218469612361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba400c4965ea4b4aa2cee6e4d3cda24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.1
 --- !u!1001 &3555032351149800479
 PrefabInstance:
   m_ObjectHideFlags: 0
