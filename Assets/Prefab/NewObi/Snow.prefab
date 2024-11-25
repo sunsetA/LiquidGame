@@ -54,6 +54,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2939382413739579938}
     m_Modifications:
+    - target: {fileID: 64706682673372316, guid: 037bcda5f2d8c2848b762add9230e873, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6721719330099714065, guid: 037bcda5f2d8c2848b762add9230e873, type: 3}
       propertyPath: m_Name
       value: RW_LP_CP_Item_SnowFlake.004

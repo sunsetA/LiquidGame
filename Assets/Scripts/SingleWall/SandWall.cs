@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class SandWall : MonoBehaviour
 {
-    public ObiCollider m_collider;
+    public ObiCollider2D m_collider;
     public ObiEmitter emitter;
 
     public int Index = -1;
@@ -18,11 +18,6 @@ public class SandWall : MonoBehaviour
 
 
 
-    private void Awake()
-    {
-        emitter = FindObjectOfType<ObiEmitter>();
-        ColliderCount = 1000;
-    }
     void Start()
     {
         emitter.solver.OnCollision += Solver_OnCollision;

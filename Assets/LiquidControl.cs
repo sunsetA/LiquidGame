@@ -25,11 +25,14 @@ public class SquidControl : MonoBehaviour
 
     public WallType currentType = WallType.wood;
 
-    public List<ObiCollider> walls;
+    public List<GameObject> walls;
 
     public Canvas UICanvas;
     [Header("墙体对象,需要有碰撞盒,以及Obi colliderzu组件")]
-    public ObiCollider entityPrefab; // 实体对象的预制体
+    public GameObject entityPrefab; // 实体对象的预制体
+
+
+    
     public float pointDistance = 0.1f; // 两点之间的距离
     private List<Vector3> points = new List<Vector3>(); // 存储鼠标点击的点
 
@@ -106,7 +109,11 @@ public class SquidControl : MonoBehaviour
             //===================================自由创作=================================
             if (currentInteracType == InteractType.Free)
             {
-
+                RaycastHit hit;
+                if (Physics.Raycast(ray,out hit,int.MaxValue))
+                {
+                    CurrentPos = hit.point;
+                }
                 if (points.Count > 0)
 
                 {
@@ -164,6 +171,8 @@ public class SquidControl : MonoBehaviour
             OriginSeletedPos = Vector3.zero;
         }
     }
+
+    public GameObject obiCollider2D;
     /// <summary>
     /// 根据点位实例化墙体对象，并设置角度和大小
     /// </summary>
@@ -171,14 +180,16 @@ public class SquidControl : MonoBehaviour
     private void InstantiateEntities_New(Vector3 targetPos)
     {
         entityPrefab = walls[(int)currentType];
+        //entityPrefab = obiCollider2D;
 
         var obj = Instantiate(entityPrefab.gameObject, targetPos, Quaternion.identity, transform);
         if ((int)currentType == 1)
         {
-            obj.GetComponent<SandWall>().Index = SandIndex;
+            obj.GetComponentInChildren<SandWall>().Index = SandIndex;
         }
         OBJpoints.Add(obj);
         obj.transform.localScale = new Vector3(0.3f, 0.02f, 0.2f);
+
         //int curIndex = obj.transform.GetSiblingIndex();
         int curIndex = points.Count - 1;
         if (curIndex > 0)
@@ -189,8 +200,9 @@ public class SquidControl : MonoBehaviour
             {
                 OBJpoints[0].transform.LookAt(OBJpoints[1].transform);
             }
+            obj.transform.localEulerAngles += new Vector3(0, 0, 90);
         }
-        entityInatanceList.Add(obj.GetComponent<ObiCollider>());
+        //entityInatanceList.Add(obj.GetComponent<ObiCollider>());
     }
     /// <summary>
     /// 按钮的点击事件++++++++++++++++++++拖拽到按钮++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -262,5 +274,6 @@ public class SquidControl : MonoBehaviour
     public void SetWall(int index)
     {
         currentType = (WallType)index;
+        currentInteracType = InteractType.Free;
     }
 }
